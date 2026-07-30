@@ -9,7 +9,7 @@ on:
       image_tag:
         description: Image tag
         required: true
-        default: 2.3.7-buttons.1
+        default: 2.3.7-buttons.2
 
 permissions:
   contents: read
@@ -43,6 +43,6 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/thiago-caffaro/evolution-api:${{ inputs.image_tag || github.ref_name }}
+          tags: ghcr.io/thiago-caffaro/evolution-api-flashflow:${{ inputs.image_tag || github.ref_name }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
